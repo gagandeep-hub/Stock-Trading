@@ -1,0 +1,388 @@
+/* Brokerage Section */
+.brokerage-section {
+  padding: 80px 0 100px;
+  background: transparent;
+  position: relative;
+}
+
+/* Left - Brokerage Card */
+.brokerage-card {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+  margin-bottom: 24px;
+}
+
+/* Card Header */
+.card-header-section {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(15, 23, 42, 0.08);
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #0284c7 0%, #10b981 100%);
+  border-radius: 16px;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.25);
+}
+
+.header-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.card-subtitle {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Charges List */
+.charges-list {
+  margin-bottom: 32px;
+}
+
+.list-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.3px;
+}
+
+.charge-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px;
+  background: rgba(248, 250, 252, 0.6);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.charge-item:hover {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(2, 132, 199, 0.15);
+  transform: translateX(4px);
+}
+
+.charge-item.warning {
+  background: rgba(249, 115, 22, 0.08);
+  border-color: rgba(249, 115, 22, 0.2);
+}
+
+.charge-item.warning:hover {
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.item-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.item-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+.item-content strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Calculator Button */
+.calculator-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #0284c7 0%, #10b981 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.25);
+  width: 100%;
+  justify-content: center;
+}
+
+.calculator-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(2, 132, 199, 0.35);
+  color: #ffffff;
+}
+
+.btn-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.calculator-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Right - Quick Links Card */
+.quick-links-card {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 100px;
+}
+
+/* Links Header */
+.links-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(15, 23, 42, 0.08);
+}
+
+.header-icon-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(2, 132, 199, 0.1);
+  border-radius: 12px;
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+.links-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+/* Links List */
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(248, 250, 252, 0.6);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-item:hover {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.2);
+  color: #0284c7;
+  transform: translateX(4px);
+}
+
+.link-arrow {
+  font-size: 16px;
+  color: #0284c7;
+  transition: transform 0.3s ease;
+}
+
+.link-item:hover .link-arrow {
+  transform: translateX(4px);
+}
+
+/* Help Note */
+.help-note {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  background: rgba(2, 132, 199, 0.08);
+  border-left: 4px solid #0284c7;
+  border-radius: 8px;
+}
+
+.note-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.help-note p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .brokerage-section {
+    padding: 60px 0 80px;
+  }
+
+  .brokerage-card {
+    margin-bottom: 32px;
+  }
+
+  .quick-links-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .brokerage-section {
+    padding: 50px 0 70px;
+  }
+
+  .brokerage-card {
+    padding: 32px 24px;
+  }
+
+  .card-header-section {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+  }
+
+  .charge-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .item-icon {
+    font-size: 20px;
+  }
+
+  .item-content p {
+    font-size: 14px;
+  }
+
+  .quick-links-card {
+    padding: 28px 24px;
+  }
+
+  .links-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brokerage-section {
+    padding: 40px 0 60px;
+  }
+
+  .brokerage-card {
+    padding: 24px 20px;
+  }
+
+  .header-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  .list-title {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .charge-item {
+    padding: 14px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item-content p {
+    font-size: 13px;
+  }
+
+  .calculator-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+  .quick-links-card {
+    padding: 24px 20px;
+  }
+
+  .links-header {
+    margin-bottom: 20px;
+  }
+
+  .header-icon-small {
+    width: 36px;
+    height: 36px;
+  }
+
+  .links-title {
+    font-size: 17px;
+  }
+
+  .link-item {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .help-note {
+    padding: 14px;
+  }
+
+  .help-note p {
+    font-size: 12px;
+  }
+}

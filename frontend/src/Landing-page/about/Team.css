@@ -1,0 +1,435 @@
+/* Team Section */
+.team-section {
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+}
+
+/* Section Header */
+.team-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 50px;
+  color: #7c3aed;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.team-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.team-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* Team Member */
+.team-member {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  padding: 50px 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.05);
+}
+
+/* Left - Image Column */
+.team-image-col {
+  padding: 20px;
+}
+
+.team-image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-frame {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin-bottom: 24px;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 15px 50px rgba(15, 23, 42, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.image-decoration {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: -15px;
+  bottom: -15px;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.developer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.3);
+}
+
+.badge-code {
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Right - Content Column */
+.team-content-col {
+  padding: 20px;
+}
+
+.team-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Name Section */
+.name-section {
+  border-bottom: 2px solid rgba(15, 23, 42, 0.08);
+  padding-bottom: 20px;
+}
+
+.member-name {
+  font-size: 36px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.8px;
+}
+
+.member-role {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Bio Section */
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bio-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #475569;
+  margin: 0;
+}
+
+/* Tech Stack */
+.tech-stack {
+  padding: 24px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.tech-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-badge {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0284c7;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(2, 132, 199, 0.1);
+  border-color: rgba(2, 132, 199, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Social Links */
+.social-links {
+  padding: 24px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.social-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 10px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+}
+
+/* Project Note */
+.project-note {
+  display: flex;
+  gap: 20px;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08) 0%, rgba(239, 68, 68, 0.08) 100%);
+  border-left: 4px solid #f97316;
+  border-radius: 16px;
+  align-items: flex-start;
+}
+
+.note-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.note-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+
+.note-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .team-section {
+    padding: 80px 0;
+  }
+
+  .team-header {
+    margin-bottom: 60px;
+  }
+
+  .team-title {
+    font-size: 36px;
+  }
+
+  .team-member {
+    padding: 40px 30px;
+  }
+
+  .team-image-col {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .image-frame {
+    margin: 0 auto 24px;
+  }
+
+  .member-name {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 0;
+  }
+
+  .team-header {
+    margin-bottom: 50px;
+  }
+
+  .team-title {
+    font-size: 32px;
+  }
+
+  .team-desc {
+    font-size: 16px;
+  }
+
+  .team-member {
+    padding: 30px 24px;
+  }
+
+  .image-frame {
+    width: 220px;
+    height: 220px;
+  }
+
+  .member-name {
+    font-size: 28px;
+  }
+
+  .bio-text {
+    font-size: 15px;
+  }
+
+  .tech-stack,
+  .social-links {
+    padding: 20px;
+  }
+
+  .social-buttons {
+    gap: 10px;
+  }
+
+  .social-btn {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+
+  .project-note {
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .note-icon {
+    font-size: 28px;
+  }
+
+  .note-content h4 {
+    font-size: 17px;
+  }
+
+  .note-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-section {
+    padding: 50px 0;
+  }
+
+  .team-title {
+    font-size: 28px;
+  }
+
+  .section-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .team-member {
+    padding: 24px 20px;
+  }
+
+  .image-frame {
+    width: 180px;
+    height: 180px;
+  }
+
+  .developer-badge {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .member-name {
+    font-size: 24px;
+  }
+
+  .tech-badges {
+    gap: 8px;
+  }
+
+  .tech-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-note {
+    flex-direction: column;
+    padding: 20px;
+  }
+}

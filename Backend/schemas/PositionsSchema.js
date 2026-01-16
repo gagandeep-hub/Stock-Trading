@@ -1,0 +1,16 @@
+const { Schema } = require("mongoose");
+
+const PositionsSchema = new Schema({
+  userId: { type: String, required: true },
+  product: { type: String, default: "CNC" },
+  name: { type: String, required: true },
+  qty: { type: Number, required: true },
+  avg: { type: Number, required: true },
+  price: { type: Number, required: true },
+  net: { type: String, default: "0.00%" },
+  day: { type: String, default: "0.00%" },
+  isLoss: { type: Boolean, default: false },
+  createdAt: { type: Date, default: Date.now },
+});
+
+module.exports = { PositionsSchema };

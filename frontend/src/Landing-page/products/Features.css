@@ -1,0 +1,384 @@
+/* Features Section */
+.features-section {
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+}
+
+/* Section Header */
+.features-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 50px;
+  color: #7c3aed;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.features-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.features-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+/* Feature Card */
+.feature-card {
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  border-color: rgba(2, 132, 199, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Feature Icon */
+.feature-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  line-height: 1;
+}
+
+/* Feature Title */
+.feature-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+}
+
+/* Feature Description */
+.feature-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-list li {
+  font-size: 14px;
+  color: #475569;
+  padding-left: 24px;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* Feature Status Badge */
+.feature-status {
+  align-self: flex-start;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.feature-status.coming-soon {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.feature-status.planned {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Tech Stack Section */
+.tech-stack-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+}
+
+.tech-stack-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.tech-stack-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0 0 40px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tech Badges */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(2, 132, 199, 0.1);
+  border-color: rgba(2, 132, 199, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.15);
+}
+
+.tech-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .features-section {
+    padding: 80px 0;
+  }
+
+  .features-header {
+    margin-bottom: 60px;
+  }
+
+  .features-title {
+    font-size: 36px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+
+  .tech-stack-section {
+    padding: 50px 32px;
+  }
+
+  .tech-stack-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 60px 0;
+  }
+
+  .features-header {
+    margin-bottom: 50px;
+  }
+
+  .features-title {
+    font-size: 32px;
+  }
+
+  .features-desc {
+    font-size: 16px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 32px 28px;
+  }
+
+  .feature-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .feature-icon {
+    font-size: 36px;
+  }
+
+  .feature-title {
+    font-size: 20px;
+  }
+
+  .feature-description {
+    font-size: 14px;
+  }
+
+  .tech-stack-section {
+    padding: 40px 28px;
+  }
+
+  .tech-stack-title {
+    font-size: 26px;
+  }
+
+  .tech-stack-desc {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .tech-badges {
+    gap: 12px;
+  }
+
+  .tech-badge {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .features-section {
+    padding: 50px 0;
+  }
+
+  .section-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .features-title {
+    font-size: 28px;
+  }
+
+  .features-grid {
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .feature-card {
+    padding: 28px 24px;
+  }
+
+  .feature-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .feature-icon {
+    font-size: 32px;
+  }
+
+  .feature-title {
+    font-size: 19px;
+  }
+
+  .feature-list {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .feature-list li {
+    font-size: 13px;
+  }
+
+  .tech-stack-section {
+    padding: 32px 24px;
+  }
+
+  .tech-stack-title {
+    font-size: 24px;
+  }
+
+  .tech-stack-desc {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .tech-badges {
+    gap: 10px;
+  }
+
+  .tech-badge {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .tech-icon {
+    font-size: 18px;
+  }
+}

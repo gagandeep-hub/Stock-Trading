@@ -1,0 +1,270 @@
+/* Stats Section - Transparent Background */
+.stats-section {
+  padding: 100px 0;
+  background: transparent; /* Transparent - uses body background */
+  position: relative;
+}
+
+.stats-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Content */
+.stats-content {
+  padding: 20px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 50px;
+  color: #7c3aed;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.stats-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  max-width: 500px;
+}
+
+/* Stats Items */
+.stats-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stats-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.stats-item:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(2, 132, 199, 0.2);
+  transform: translateX(8px);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+}
+
+.item-icon {
+  font-size: 36px;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 132, 199, 0.1);
+  border-radius: 12px;
+}
+
+.item-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.3px;
+}
+
+.item-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* Right Visual */
+.stats-visual {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.visual-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.visual-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.stats-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Stats Links */
+.stats-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 10px;
+}
+
+.stats-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.stats-link:hover {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.3);
+  color: #0284c7;
+  transform: translateX(4px);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.15);
+}
+
+.link-arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  color: #0284c7;
+}
+
+.stats-link:hover .link-arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .stats-section {
+    padding: 80px 0;
+  }
+
+  .stats-content {
+    margin-bottom: 50px;
+  }
+
+  .stats-content h2 {
+    font-size: 36px;
+    max-width: 100%;
+  }
+
+  .stats-visual {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 60px 0;
+  }
+
+  .stats-content h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .stats-item {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .item-icon {
+    font-size: 32px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .item-content h4 {
+    font-size: 17px;
+  }
+
+  .item-content p {
+    font-size: 14px;
+  }
+
+  .stats-links {
+    gap: 12px;
+  }
+
+  .stats-link {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-section {
+    padding: 50px 0;
+  }
+
+  .stats-content {
+    padding: 10px;
+  }
+
+  .stats-visual {
+    padding: 10px;
+  }
+
+  .stats-content h2 {
+    font-size: 28px;
+  }
+
+  .section-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .stats-item {
+    flex-direction: column;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .item-icon {
+    font-size: 28px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .item-content h4 {
+    font-size: 16px;
+  }
+
+  .stats-links {
+    padding: 0 5px;
+  }
+
+  .stats-link {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+}
