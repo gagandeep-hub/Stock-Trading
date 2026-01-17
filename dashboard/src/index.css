@@ -3392,6 +3392,32 @@ hr {
     box-shadow: none;
   }
 
+  /* Watchlist full-width on mobile - no left/right gaps */
+  .sp-watchlist {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-right: none;
+  }
+
+  .sp-watchlist-header {
+    padding: 12px 12px;
+  }
+
+  .sp-stock-item {
+    padding: 10px 12px;
+  }
+
+  /* Watchlist tabs at bottom - full width, no gaps */
+  .sp-watchlist-tabs {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    border-bottom: none;
+  }
+
   .content {
     flex-basis: 100%;
     width: 100%;
