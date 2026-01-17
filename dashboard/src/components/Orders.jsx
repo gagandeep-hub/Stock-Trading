@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../utils/api";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
@@ -10,9 +10,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get("https://stockpilot-7nuo.onrender.com/allOrders", {
-          withCredentials: true,
-        });
+        const res = await api.get("/allOrders");
         setAllOrders(res.data);
       } catch (err) {
         setError("Failed to load orders");

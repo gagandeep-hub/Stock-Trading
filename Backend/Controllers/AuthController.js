@@ -20,12 +20,14 @@ module.exports.Signup = async (req, res) => {
       sameSite: "none",  // Required for cross-domain cookies
       secure: true,       // Required when sameSite is 'none' (HTTPS)
       path: "/",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
 
     res.status(201).json({
       message: "User signed up successfully",
       success: true,
+      token,
     });
 
   } catch (error) {
@@ -53,9 +55,10 @@ module.exports.Login = async (req, res, next) => {
       sameSite: "none",  // Required for cross-domain cookies
       secure: true,       // Required when sameSite is 'none' (HTTPS)
       path: "/",
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
 
-    res.status(201).json({ message: "User logged in successfully", success: true });
+    res.status(201).json({ message: "User logged in successfully", success: true, token });
     next()
   } catch (error) {
     console.error(error);

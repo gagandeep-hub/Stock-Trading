@@ -74,6 +74,7 @@ const Menu = () => {
 
   const handleLogout = () => {
     removeCookie("token", { path: "/" });
+    localStorage.removeItem('authToken');
     setUser(null);
     window.location.href = "https://stockpilot-frontend-wr6p.onrender.com/login";
   };
@@ -92,25 +93,49 @@ const Menu = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const verifyCookie = async () => {
+    const verifyAuth = async () => {
+      // Check for token in URL first (from login/signup redirect)
+      const urlParams = new URLSearchParams(window.location.search);
+      let token = urlParams.get('token');
+
+      if (token) {
+        // Store token in localStorage and remove from URL
+        localStorage.setItem('authToken', token);
+        window.history.replaceState({}, document.title, window.location.pathname);
+      } else {
+        // Try to get token from localStorage
+        token = localStorage.getItem('authToken');
+      }
+
+      if (!token) {
+        window.location.href = "https://stockpilot-frontend-wr6p.onrender.com/login";
+        return;
+      }
+
       try {
         const { data } = await axios.post(
           "https://stockpilot-7nuo.onrender.com/auth",
           {},
-          { withCredentials: true }
+          {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          }
         );
 
         if (!data.status) {
+          localStorage.removeItem('authToken');
           window.location.href = "https://stockpilot-frontend-wr6p.onrender.com/login";
         } else {
           setUser(data.user);
         }
       } catch {
+        localStorage.removeItem('authToken');
         window.location.href = "https://stockpilot-frontend-wr6p.onrender.com/login";
       }
     };
 
-    verifyCookie();
+    verifyAuth();
   }, []);
 
   // Close dropdown when clicking outside

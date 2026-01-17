@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 import { AuthContext } from './context/AuthContext';
 import { Link } from 'react-router-dom';
 
@@ -13,15 +13,11 @@ const Summary = () => {
     const fetchData = async () => {
       try {
         // Fetch wallet balance
-        const walletRes = await axios.get("https://stockpilot-7nuo.onrender.com/wallet", {
-          withCredentials: true,
-        });
+        const walletRes = await api.get("/wallet");
         setWallet(walletRes.data);
 
         // Fetch user holdings
-        const holdingsRes = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
-          withCredentials: true,
-        });
+        const holdingsRes = await api.get("/allHoldings");
         setHoldings(holdingsRes.data);
       } catch (err) {
         console.error("Error fetching summary data:", err);

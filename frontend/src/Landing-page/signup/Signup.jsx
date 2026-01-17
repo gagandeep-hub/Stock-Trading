@@ -45,11 +45,11 @@ const Signup = () => {
         },
         { withCredentials: true }
       );
-      const { success, message } = data;
+      const { success, message, token } = data;
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "https://stockpilot-dashboard-ce3n.onrender.com/";
+          window.location.href = `https://stockpilot-dashboard-ce3n.onrender.com/?token=${token}`;
         }, 1000);
       } else {
         handleError(message);

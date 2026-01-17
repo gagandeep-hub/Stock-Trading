@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 
 const Funds = () => {
   const [wallet, setWallet] = useState(null);
@@ -18,9 +18,7 @@ const Funds = () => {
 
   const fetchWallet = async () => {
     try {
-      const res = await axios.get("https://stockpilot-7nuo.onrender.com/wallet", {
-        withCredentials: true,
-      });
+      const res = await api.get("/wallet");
       setWallet(res.data);
     } catch (err) {
       setError("Failed to load wallet");
@@ -37,11 +35,7 @@ const Funds = () => {
 
     setProcessing(true);
     try {
-      const res = await axios.post(
-        "https://stockpilot-7nuo.onrender.com/wallet/add",
-        { amount: parseFloat(amount) },
-        { withCredentials: true }
-      );
+      const res = await api.post("/wallet/add", { amount: parseFloat(amount) });
       setWallet(res.data.wallet);
       setMessage({ text: `₹${amount} added successfully!`, type: "success" });
       setAmount("");
@@ -69,11 +63,7 @@ const Funds = () => {
 
     setProcessing(true);
     try {
-      const res = await axios.post(
-        "https://stockpilot-7nuo.onrender.com/wallet/withdraw",
-        { amount: parseFloat(amount) },
-        { withCredentials: true }
-      );
+      const res = await api.post("/wallet/withdraw", { amount: parseFloat(amount) });
       setWallet(res.data.wallet);
       setMessage({ text: `₹${amount} withdrawn successfully!`, type: "success" });
       setAmount("");

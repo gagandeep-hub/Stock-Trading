@@ -3,7 +3,16 @@ const jwt = require("jsonwebtoken");
 
 module.exports.userVerification = async (req, res, next) => {
   try {
-    const token = req.cookies.token;
+    // Check for token in cookies first, then in Authorization header
+    let token = req.cookies.token;
+
+    // If no cookie token, check Authorization header (Bearer token)
+    if (!token && req.headers.authorization) {
+      const authHeader = req.headers.authorization;
+      if (authHeader.startsWith('Bearer ')) {
+        token = authHeader.substring(7);
+      }
+    }
 
     if (!token) {
       return res.status(401).json({ status: false });

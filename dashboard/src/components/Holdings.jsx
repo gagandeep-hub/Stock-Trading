@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../utils/api';
 
 // Helper function to check if market is open
 const isMarketOpen = () => {
@@ -25,9 +25,7 @@ const Holdings = () => {
     useEffect(() => {
         const fetchHoldings = async () => {
             try {
-                const res = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
-                    withCredentials: true,
-                });
+                const res = await api.get("/allHoldings");
                 // Add live price tracking
                 const holdingsWithLivePrices = res.data.map(holding => ({
                     ...holding,

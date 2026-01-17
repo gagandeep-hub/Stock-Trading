@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import axios from "axios";
+import api from "../utils/api";
 import GeneralContext from "./GeneralContext ";
 import { watchlist } from "../data/data";
 import "./BuyActionWindow.css";
@@ -41,15 +41,11 @@ const BuyActionWindow = ({ uid }) => {
     const fetchData = async () => {
       try {
         // Get wallet balance
-        const walletRes = await axios.get("https://stockpilot-7nuo.onrender.com/wallet", {
-          withCredentials: true,
-        });
+        const walletRes = await api.get("/wallet");
         setWalletBalance(walletRes.data.balance);
 
         // Get user's holdings to check if they own this stock
-        const holdingsRes = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
-          withCredentials: true,
-        });
+        const holdingsRes = await api.get("/allHoldings");
         const holding = holdingsRes.data.find(h => h.name === uid);
         setUserHolding(holding || null);
 
@@ -108,16 +104,12 @@ const BuyActionWindow = ({ uid }) => {
     }
 
     try {
-      const res = await axios.post(
-        "https://stockpilot-7nuo.onrender.com/newOrder",
-        {
-          name: uid,
-          qty: parseInt(stockQuantity),
-          price: livePrice, // Use live price for both buy and sell
-          mode: orderMode,
-        },
-        { withCredentials: true }
-      );
+      const res = await api.post("/newOrder", {
+        name: uid,
+        qty: parseInt(stockQuantity),
+        price: livePrice, // Use live price for both buy and sell
+        mode: orderMode,
+      });
 
       if (orderMode === "BUY") {
         setSuccess(`✓ Bought ${stockQuantity} shares of ${uid} at ₹${livePrice.toFixed(2)}`);
@@ -132,9 +124,7 @@ const BuyActionWindow = ({ uid }) => {
       }
 
       // Refresh holding data
-      const holdingsRes = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
-        withCredentials: true,
-      });
+      const holdingsRes = await api.get("/allHoldings");
       const holding = holdingsRes.data.find(h => h.name === uid);
       setUserHolding(holding || null);
 
