@@ -11,5 +11,19 @@ node_modules/
 dist/
 build/
 
-# Logs
+
 npm-debug.log*
+# root level
+.env
+node_modules/
+
+# backend specific
+Backend/.env
+Backend/node_modules/
+
+# frontend (if any)
+frontend/.env
+frontend/node_modules/
+ 
+ dashboard/.env
+ dashboard/node_modules/

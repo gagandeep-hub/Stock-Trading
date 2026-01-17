@@ -95,7 +95,7 @@ const Menu = () => {
     const verifyCookie = async () => {
       try {
         const { data } = await axios.post(
-          "http://localhost:3002/auth",
+          "https://stockpilot-7nuo.onrender.com/auth",
           {},
           { withCredentials: true }
         );

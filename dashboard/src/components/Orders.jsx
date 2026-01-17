@@ -10,7 +10,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get("http://localhost:3002/allOrders", {
+        const res = await axios.get("https://stockpilot-7nuo.onrender.com/allOrders", {
           withCredentials: true,
         });
         setAllOrders(res.data);

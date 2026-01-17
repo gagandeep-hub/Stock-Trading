@@ -18,7 +18,7 @@ const Funds = () => {
 
   const fetchWallet = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/wallet", {
+      const res = await axios.get("https://stockpilot-7nuo.onrender.com/wallet", {
         withCredentials: true,
       });
       setWallet(res.data);
@@ -38,7 +38,7 @@ const Funds = () => {
     setProcessing(true);
     try {
       const res = await axios.post(
-        "http://localhost:3002/wallet/add",
+        "https://stockpilot-7nuo.onrender.com/wallet/add",
         { amount: parseFloat(amount) },
         { withCredentials: true }
       );
@@ -70,7 +70,7 @@ const Funds = () => {
     setProcessing(true);
     try {
       const res = await axios.post(
-        "http://localhost:3002/wallet/withdraw",
+        "https://stockpilot-7nuo.onrender.com/wallet/withdraw",
         { amount: parseFloat(amount) },
         { withCredentials: true }
       );

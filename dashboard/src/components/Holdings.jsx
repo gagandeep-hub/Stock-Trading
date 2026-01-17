@@ -25,7 +25,7 @@ const Holdings = () => {
     useEffect(() => {
         const fetchHoldings = async () => {
             try {
-                const res = await axios.get("http://localhost:3002/allHoldings", {
+                const res = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
                     withCredentials: true,
                 });
                 // Add live price tracking

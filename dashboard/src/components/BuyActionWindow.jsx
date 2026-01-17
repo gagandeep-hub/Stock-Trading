@@ -41,13 +41,13 @@ const BuyActionWindow = ({ uid }) => {
     const fetchData = async () => {
       try {
         // Get wallet balance
-        const walletRes = await axios.get("http://localhost:3002/wallet", {
+        const walletRes = await axios.get("https://stockpilot-7nuo.onrender.com/wallet", {
           withCredentials: true,
         });
         setWalletBalance(walletRes.data.balance);
 
         // Get user's holdings to check if they own this stock
-        const holdingsRes = await axios.get("http://localhost:3002/allHoldings", {
+        const holdingsRes = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
           withCredentials: true,
         });
         const holding = holdingsRes.data.find(h => h.name === uid);
@@ -109,7 +109,7 @@ const BuyActionWindow = ({ uid }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3002/newOrder",
+        "https://stockpilot-7nuo.onrender.com/newOrder",
         {
           name: uid,
           qty: parseInt(stockQuantity),
@@ -132,7 +132,7 @@ const BuyActionWindow = ({ uid }) => {
       }
 
       // Refresh holding data
-      const holdingsRes = await axios.get("http://localhost:3002/allHoldings", {
+      const holdingsRes = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
         withCredentials: true,
       });
       const holding = holdingsRes.data.find(h => h.name === uid);

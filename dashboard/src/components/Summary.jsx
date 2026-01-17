@@ -13,13 +13,13 @@ const Summary = () => {
     const fetchData = async () => {
       try {
         // Fetch wallet balance
-        const walletRes = await axios.get("http://localhost:3002/wallet", {
+        const walletRes = await axios.get("https://stockpilot-7nuo.onrender.com/wallet", {
           withCredentials: true,
         });
         setWallet(walletRes.data);
 
         // Fetch user holdings
-        const holdingsRes = await axios.get("http://localhost:3002/allHoldings", {
+        const holdingsRes = await axios.get("https://stockpilot-7nuo.onrender.com/allHoldings", {
           withCredentials: true,
         });
         setHoldings(holdingsRes.data);

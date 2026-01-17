@@ -39,7 +39,7 @@ const Signup = () => {
     
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/auth/signup",
+        "https://stockpilot-7nuo.onrender.com/auth/signup",
         {
           ...inputValue,
         },
