@@ -75,7 +75,7 @@ const Menu = () => {
   const handleLogout = () => {
     removeCookie("token", { path: "/" });
     setUser(null);
-    window.location.href = "http://localhost:5173/login";
+    window.location.href = "https://stockpilot-frontend-wr6p.onrender.com/login";
   };
 
   // Sync selected menu with current route
@@ -101,12 +101,12 @@ const Menu = () => {
         );
 
         if (!data.status) {
-          window.location.href = "http://localhost:5173/login";
+          window.location.href = "https://stockpilot-frontend-wr6p.onrender.com/login";
         } else {
           setUser(data.user);
         }
       } catch {
-        window.location.href = "http://localhost:5173/login";
+        window.location.href = "https://stockpilot-frontend-wr6p.onrender.com/login";
       }
     };
 

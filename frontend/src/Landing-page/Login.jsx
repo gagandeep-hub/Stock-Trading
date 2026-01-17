@@ -11,9 +11,9 @@ const Login = () => {
     password: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const { email, password } = inputValue;
-  
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue({
@@ -26,7 +26,7 @@ const Login = () => {
     toast.error(err, {
       position: "bottom-left",
     });
-    
+
   const handleSuccess = (msg) =>
     toast.success(msg, {
       position: "bottom-left",
@@ -35,7 +35,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       const { data } = await axios.post(
         "https://stockpilot-7nuo.onrender.com/auth/login",
@@ -49,7 +49,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:5174/";
+          window.location.href = "https://stockpilot-dashboard-ce3n.onrender.com/";
         }, 1000);
       } else {
         handleError(message);
@@ -60,7 +60,7 @@ const Login = () => {
     } finally {
       setIsLoading(false);
     }
-    
+
     setInputValue({
       ...inputValue,
       email: "",
@@ -71,7 +71,7 @@ const Login = () => {
   return (
     <div className="login-page">
       <div className="login-container">
-        
+
         {/* Left Side - Branding */}
         <div className="login-left">
           {/* <Link to="/" className="brand-logo">
@@ -86,7 +86,7 @@ const Login = () => {
               Welcome Back to StockPilot
             </h1>
             <p className="welcome-desc">
-              Sign in to your account to access your portfolio, track your 
+              Sign in to your account to access your portfolio, track your
               trades, and continue your trading journey.
             </p>
 
@@ -110,14 +110,14 @@ const Login = () => {
         {/* Right Side - Form */}
         <div className="login-right">
           <div className="form-wrapper">
-            
+
             <div className="form-header">
               <h2 className="form-title">Sign In</h2>
               <p className="form-subtitle">Welcome back! Please enter your details</p>
             </div>
 
             <form onSubmit={handleSubmit} className="login-form">
-              
+
               <div className="form-group">
                 <label htmlFor="email" className="form-label">
                   Email Address
@@ -161,8 +161,8 @@ const Login = () => {
                 </div>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="submit-btn"
                 disabled={isLoading}
               >
@@ -193,7 +193,7 @@ const Login = () => {
         </div>
 
       </div>
-      
+
       <ToastContainer />
     </div>
   );

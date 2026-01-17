@@ -12,9 +12,9 @@ const Signup = () => {
     username: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const { email, password, username } = inputValue;
-  
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue({
@@ -27,7 +27,7 @@ const Signup = () => {
     toast.error(err, {
       position: "bottom-left",
     });
-    
+
   const handleSuccess = (msg) =>
     toast.success(msg, {
       position: "bottom-right",
@@ -36,7 +36,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       const { data } = await axios.post(
         "https://stockpilot-7nuo.onrender.com/auth/signup",
@@ -49,7 +49,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "http://localhost:5174/";
+          window.location.href = "https://stockpilot-dashboard-ce3n.onrender.com/";
         }, 1000);
       } else {
         handleError(message);
@@ -60,7 +60,7 @@ const Signup = () => {
     } finally {
       setIsLoading(false);
     }
-    
+
     setInputValue({
       ...inputValue,
       email: "",
@@ -72,7 +72,7 @@ const Signup = () => {
   return (
     <div className="signup-page">
       <div className="signup-container">
-        
+
         {/* Left Side - Branding */}
         <div className="signup-left">
           {/* <Link to="/" className="brand-logo">
@@ -87,7 +87,7 @@ const Signup = () => {
               Start Your Trading Journey Today
             </h1>
             <p className="welcome-desc">
-              Join thousands of traders who trust StockPilot for their 
+              Join thousands of traders who trust StockPilot for their
               trading needs. Create your account and get started in minutes.
             </p>
 
@@ -111,14 +111,14 @@ const Signup = () => {
         {/* Right Side - Form */}
         <div className="signup-right">
           <div className="form-wrapper">
-            
+
             <div className="form-header">
               <h2 className="form-title">Create Account</h2>
               <p className="form-subtitle">Get started with your free account</p>
             </div>
 
             <form onSubmit={handleSubmit} className="signup-form">
-              
+
               <div className="form-group">
                 <label htmlFor="username" className="form-label">
                   Username
@@ -179,8 +179,8 @@ const Signup = () => {
                 </p>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="submit-btn"
                 disabled={isLoading}
               >
@@ -218,7 +218,7 @@ const Signup = () => {
         </div>
 
       </div>
-      
+
       <ToastContainer />
     </div>
   );
