@@ -15,7 +15,7 @@ const Footer = () => {
               <div className="footer-logo-wrapper">
                 <img src="/assets/logo (2).png" alt="Stock Pilot logo" />
               </div>
-              <span className="footer-brand-name">STOCK PILOT</span>
+              <span className="footer-brand-name">STOCKPILOT</span>
             </Link>
 
             <p className="footer-desc">
